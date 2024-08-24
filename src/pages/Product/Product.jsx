@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import BalanceIcon from "@mui/icons-material/Balance";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -7,23 +7,26 @@ import { useDispatch, useSelector } from "react-redux";
 import { addCart } from "../../Redux/useReducer";
 import { useParams } from "react-router-dom";
 import { productData } from "../../assets/productData";
-import { closeBtn } from '../../Redux/useReducer'
+import { closeBtn } from "../../Redux/useReducer";
 
 const Product = () => {
   const dispatch = useDispatch();
-  const openCart = useSelector((state)=>state.cart.openCart);
+  const openCart = useSelector((state) => state.cart.openCart);
   const [index, setIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
 
   const itemId = parseInt(useParams().id);
   const data = productData.find((item) => item.id === itemId);
 
-  useEffect(()=>{
+  useEffect(() => {
     window.scrollTo(0, 0);
-  },[])
+  }, []);
 
   return (
-    <div className="product" onClick={()=>`${openCart?dispatch(closeBtn()) :''}`}>
+    <div
+      className="product"
+      onClick={() => `${openCart ? dispatch(closeBtn()) : ""}`}
+    >
       {/* left side */}
       <div className="left">
         <div className="img-box">
