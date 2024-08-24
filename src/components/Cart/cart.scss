@@ -1,0 +1,93 @@
+@import "../../app.scss";
+.cart-container {
+    position: absolute;
+    top: 61px;
+    right: 10px;
+    width: 350px;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.388),
+    -0px 0 5px rgba(0, 0, 0, 0.47);
+    padding: 20px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include bigMobile {
+        right: 0;
+        width: 300px;
+        top: 51px;
+    }
+    .title {
+        font-weight: 400;
+        opacity: .7;
+        font-size: 16px;
+    }
+    .products-bucket {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-height: 300px;
+        overflow: scroll;
+        .cart {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            img {
+                width: 60px;
+                height: 80px;
+            }
+    
+            .details {
+                display: flex;
+                flex-direction: column;
+                p {
+                    font-size: 14px;
+                }
+                .des {
+                    margin-top: 8px;
+                    font-size: 12px;
+                    opacity: .8;
+                }
+                .price {
+                    color: blue;
+                    font-size: 10px;
+                    margin-top: 2px;
+                }
+            }
+            .delete {
+                color: red;
+                background-color: transparent;
+                &:hover {
+                    opacity: .6;
+                }
+            }
+        }
+    }
+
+
+    .total {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .proceed {
+        background: rgba(0, 0, 255, 0.763);
+        color: white;
+        padding: 5px 20px;
+        cursor: pointer;
+        text-transform: capitalize;
+        &:hover {
+            opacity: .6;
+        }
+    }
+
+    .reset {
+        color: red;
+        padding: 5px ;
+        cursor: pointer;
+        &:hover {
+            opacity: .6;
+        }
+    }
+}

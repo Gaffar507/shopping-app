@@ -1,0 +1,100 @@
+@import "../../app.scss";
+.products {
+    margin: 20px 0;
+    .wrapper {
+        display: flex;
+        padding: 0 40px;
+        justify-content: space-between;
+
+        @include tablet {
+            padding: 0 30px;
+        }
+         @include bigMobile {
+            padding: 0 20px;
+         }
+         @include mobile {
+            padding: 0 10px;
+         }
+        .menu {
+            flex: 1;
+            position: sticky;
+            top: 80px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+             @include bigMobile {
+                top: 70px;
+             }
+            h3 {
+                font-weight: 400;
+                margin-bottom: 5px;
+
+                 @include bigMobile {
+                    font-size: 16px;
+                 }
+                 @include mobile {
+                    font-size: 12px;
+                    font-weight: 500;
+                 }
+            }
+
+            .item {
+                input {
+                    height: 10px;
+                }
+                label  {
+                    font-size: 14px;
+
+                    @include bigMobile {
+                        font-size: 12px;
+                     }
+                     @include mobile {
+                        font-size: 10px;
+                     }
+                }
+            }
+            
+            .filter {
+                .item {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+                    input {
+                        height: 5px;
+                        background-color: transparent;
+
+                         @include mobile {
+                            width: 80px;
+                         }
+                    }
+                }
+            }
+        }
+
+        .items {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            height: calc(100vh - 80px);
+            overflow: scroll;
+
+            @include tablet {
+                padding-left: 20px;
+             }
+             @include bigMobile {
+                padding-left: 15px;
+             }
+             @include mobile {
+                padding-left: 10px;
+             }
+            .banner-img {
+                height: 180px;
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+@import "../../app.scss";
+.contact-container {
+    margin: 30px 0;
+    background-color: blue;
+    padding: 10px;
+
+    @include tablet {
+        padding: 8px;
+    }
+    @include bigMobile {
+        padding: 5px 0;
+    }
+    .wrapper {
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include desktop {
+            width: 70%;
+        }
+
+        @include tablet {
+            width: 80%;
+        }
+        @include bigMobile {
+            width: 90%;
+        }
+
+
+        .left {
+            text-transform: uppercase;
+            color: white;
+            @include bigMobile {
+                font-size: 12px;
+            }
+            @include mobile {
+                font-size: 8px;
+            }
+        }
+
+        .center {
+            display: flex;
+
+            input {
+                border: none;
+                background-color: white;
+                font-size: 12px;
+                border-radius: 3px 0 0 3px;
+                padding-left: 5px;
+                @include bigMobile {
+                    font-size: 10px;
+                }
+                @include mobile {
+                    font-size: 8px;
+                }
+            }
+            button {
+                border: none;
+                background: transparent;
+                background-color: rgb(58, 58, 58);
+                text-transform: uppercase;
+                cursor: pointer;
+                border-radius: 0 3px 3px 0;
+                padding: 8px;
+                color: white;
+                font-size: 12px;
+                
+                @include tablet {
+                    padding: 5px;
+                }
+                @include bigMobile {
+                    padding: 3px;
+                    font-size: 8px;
+                }
+                @include mobile {
+                    padding: 2px;
+                    font-size: 6px;
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            gap: 10px;
+            color: white;
+            font-size: 10px;
+
+            @include bigMobile {
+                .icon {
+                    width: 20px;
+                }
+            }
+            @include mobile {
+                .icon {
+                    width: 15px;
+                }
+            }
+            a {
+                &:hover {
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}

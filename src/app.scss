@@ -1,0 +1,35 @@
+.app {
+
+}
+
+
+// make it different file and keep
+@mixin desktop {
+    @media(max-width: 1024px){
+        @content;
+    }
+}
+@mixin tablet {
+    @media(max-width: 881px){
+        @content;
+    }
+}
+@mixin bigMobile {
+    @media(max-width: 676px){
+        @content;
+    }
+}
+@mixin mobile {
+    @media(max-width: 480px){
+        @content;
+    }
+}
+
+/*
+
+@import "../../app.scss";
+
+@include mobile {
+    
+}
+*/
