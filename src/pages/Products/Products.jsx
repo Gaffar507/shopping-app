@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Lists from "../../components/Lists/Lists";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -17,11 +17,17 @@ const Products = () => {
     setMaxprice(e.target.value);
   };
 
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
+
   return (
     <div className="products"  onClick={()=>`${openCart?dispatch(closeBtn()) :''}`}>
       <div className="wrapper">
         {/* menu section */}
         <div className="menu">
+          <div className="menu-wrapper">
+
           <div className="category">
             <h3>Product Categories</h3>
             <div className="item">
@@ -31,7 +37,7 @@ const Products = () => {
                 id="1"
                 value="shoes"
                 onChange={(e) => setCategory(e.target.value)}
-              />
+                />
               <label htmlFor="1"> Shoes</label>
             </div>
             <div className="item">
@@ -41,7 +47,7 @@ const Products = () => {
                 id="2"
                 value="skirts"
                 onChange={(e) => setCategory(e.target.value)}
-              />
+                />
               <label htmlFor="2"> Skirts</label>
             </div>
             <div className="item">
@@ -51,7 +57,7 @@ const Products = () => {
                 id="3"
                 value="coats"
                 onChange={(e) => setCategory(e.target.value)}
-              />
+                />
               <label htmlFor="3"> Coats</label>
             </div>
           </div>
@@ -67,7 +73,7 @@ const Products = () => {
                 max={1000}
                 value={maxPrice}
                 onChange={(e) => changeValue(e)}
-              />
+                />
               <label htmlFor="item">{maxPrice}</label>
             </div>
           </div>
@@ -81,7 +87,7 @@ const Products = () => {
                 id="item"
                 value="asc"
                 onChange={(e) => setSort(e.target.value)}
-              />
+                />
               <label htmlFor="asc"> Price (Lowest first)</label>
             </div>
             <div className="item">
@@ -91,9 +97,10 @@ const Products = () => {
                 id="item"
                 value="des"
                 onChange={(e) => setSort(e.target.value)}
-              />
+                />
               <label htmlFor="des"> Price (Hightest first)</label>
             </div>
+          </div>
           </div>
         </div>
 

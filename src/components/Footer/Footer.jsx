@@ -7,7 +7,8 @@ const Footer = () => {
     <div className="footer">
       {/* top part */}
       <div className="top">
-          <div className="item-categories">
+        <div className="left">
+            <div className="item-categories">
             <h3>Categories</h3>
             <Link to={"/products/1"}>Men</Link>
             <Link to={"/products/2"}>Women</Link>
@@ -23,7 +24,9 @@ const Footer = () => {
             <Link to={""}>Compare</Link>
             <Link to={""}>Cookies</Link>
           </div>
+        </div>
 
+    <div className="right">
           <div className="about">
             <h3>About</h3>
             <p>
@@ -42,6 +45,8 @@ const Footer = () => {
             </p>
           </div>
         </div>
+    </div>
+
 
       {/* bottom part */}
       <div className="bottom">

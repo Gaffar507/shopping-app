@@ -22,6 +22,7 @@ export const cartReducer = createSlice({
       state.products = state.products.filter(
         (item) => item.id !== action.payload
       );
+      state.openCart = !state.openCart
     },
 
     resetCart: (state) => {

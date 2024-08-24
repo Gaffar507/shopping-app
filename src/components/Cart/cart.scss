@@ -15,8 +15,11 @@
 
     @include bigMobile {
         right: 0;
-        width: 300px;
+        width: 320px;
         top: 51px;
+    }
+    @include mobile {
+        width: 300px;
     }
     .title {
         font-weight: 400;
@@ -26,7 +29,7 @@
     .products-bucket {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
         max-height: 300px;
         overflow: scroll;
         .cart {
@@ -36,18 +39,32 @@
             img {
                 width: 60px;
                 height: 80px;
+                @include bigMobile {
+                    height: 90px;
+                }
             }
     
             .details {
                 display: flex;
                 flex-direction: column;
+
                 p {
                     font-size: 14px;
+                    @include bigMobile {
+                        font-size: 13px;
+                    }
+                    @include mobile {
+                        font-size: 12px;
+                    }
                 }
                 .des {
                     margin-top: 8px;
                     font-size: 12px;
                     opacity: .8;
+                    @include bigMobile {
+                        margin-top: 5px;
+                        font-size: 11px;
+                    }
                 }
                 .price {
                     color: blue;
@@ -58,8 +75,10 @@
             .delete {
                 color: red;
                 background-color: transparent;
+                height: fit-content;
+                align-self: center;
                 &:hover {
-                    opacity: .6;
+                    opacity: .4;
                 }
             }
         }

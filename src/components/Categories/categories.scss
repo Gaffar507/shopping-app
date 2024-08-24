@@ -40,18 +40,18 @@
       left: 50%;
       transform: translateX(-50%);
       background: transparent;
-      background-color: rgb(255, 255, 255);
+      background-color: rgba(0, 42, 255, 0.616);
       padding: 5px 10px;
-      color: rgb(0, 0, 0);
+      color: rgb(255, 255, 255);
       border-radius: 0;
       font-size: 12px;
-      font-weight: 600;
+      font-weight: 400;
       a::after {
         display: none;
       }
       &:hover {
-        background-color: rgba(0, 0, 255, 0.721);
-        color: white;
+        background-color: rgba(255, 255, 255, 0.785);
+        color: rgb(0, 8, 255);
       }
     }
   }

@@ -9,6 +9,10 @@
       width: 90%;
     }
 
+    @include bigMobile {
+      width: 80%;
+    }
+
   .top {
     display: flex;
     justify-content: space-between;
@@ -23,7 +27,7 @@
           font-size: 18px;
       }
       @include mobile {
-          font-size: 15px;
+          font-size: 16px;
       }
     }
     p {
@@ -49,11 +53,8 @@
     @include desktop {
       gap: 30px;
     }
-    @include tablet {
-      gap: 20px;
-    }
     @include bigMobile{
-      gap: 10px;
+      flex-wrap: wrap;
     }
   }
 }

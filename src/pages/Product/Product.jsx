@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import BalanceIcon from "@mui/icons-material/Balance";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -17,6 +17,10 @@ const Product = () => {
 
   const itemId = parseInt(useParams().id);
   const data = productData.find((item) => item.id === itemId);
+
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
 
   return (
     <div className="product" onClick={()=>`${openCart?dispatch(closeBtn()) :''}`}>

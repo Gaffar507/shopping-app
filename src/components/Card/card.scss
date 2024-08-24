@@ -29,7 +29,6 @@
         .images {
             width: 200px;
             height: 300px;
-
             @include desktop {
                 width: 100%;
             }
@@ -58,16 +57,6 @@
             font-size: 14px;
             font-weight: 600;
             opacity: .8;
-
-            @include tablet {
-                font-size: 12px;
-            }
-            @include bigMobile{
-                font-size: 10px;
-            }
-            @include mobile {
-                font-size: 8px;
-            }
             &::after {
                 display: none;
             }
@@ -81,14 +70,6 @@
             font-size: 12px;
             @include tablet {
                 gap: 15px;
-            }
-            @include bigMobile{
-                gap: 12px;
-                font-size: 10px;
-            }
-            @include mobile {
-                gap: 10px;
-                font-size: 8px;
             }
             .oldPrice {
                 text-decoration: line-through;
